@@ -251,7 +251,7 @@ nav.side a:hover{
 }
 
 .hamburger{
-  size: 18px;
+  size: 10px;
 }
 
 .landing-image{
@@ -373,14 +373,14 @@ nav.side a:hover{
 .back-to-top a{
   position: absolute;
   top: 10%;
-  left: 35%;
+  left: 30%;
   margin-left: 1.3rem;
   color: whitesmoke;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
   border-radius: 10px;
-  border: solid white 5px;
+  border: solid white 2px;
   padding: 0.5rem;
   background: linear-gradient(90deg, #0b76ff 0%, #39ff14 100%);
 }
@@ -416,5 +416,6 @@ footer p{
   transform: translateX(-50%);
   font-size: 0.7rem;
 }
+
 
 
