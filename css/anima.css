@@ -1,0 +1,80 @@
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(36px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideright {
+  0% { transform: translateX(-300px); }
+  50% { transform: translateX(50px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slidetop {
+  0% { transform: translateY(150px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideleft {
+  0% { transform: translateX(150px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes zoom {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes neonPulse{
+  0%{ text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14; }
+  50%{ text-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14; }
+  100%{ text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14; }
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px) translateX(2px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.98; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Animation activation: only when .reveal.show is present --- */
+
+/* Landing */
+.reveal.landing-logo.show { animation: slideright 3s cubic-bezier(.2,.9,.2,1) forwards; }
+.reveal.landing-text.show { animation: slideright 3s cubic-bezier(.2,.9,.2,1) forwards; }
+
+/* Tabs (staggered durations) */
+.reveal.tab1.show { animation: bounce 1.2s ease 0s 1; }
+.reveal.tab2.show { animation: bounce 1.35s ease 0s 1; }
+.reveal.tab3.show { animation: bounce 1.5s ease 0s 1; }
+.reveal.tab4.show { animation: bounce 1.65s ease 0s 1; }
+
+/* Sections */
+.reveal.home.show { animation: slidetop 3s cubic-bezier(.2,.9,.2,1) forwards; }
+.reveal.about.show { animation: slideleft 3s cubic-bezier(.2,.9,.2,1) forwards; }
+.reveal.services.show {
+  /* entrance slowed to 3s, keep floaty loop as-is */
+  animation: slidetop 3s cubic-bezier(.2,.9,.2,1) forwards, floaty 3.5s ease-in-out 1.1s infinite;
+  transform-origin: center;
+}
+.reveal.achievements.show {
+  /* slide into place slower, then a very subtle pulse to draw attention */
+  animation: slidetop 3s cubic-bezier(.2,.9,.2,1) forwards, pulse 3.5s ease-in-out 1s infinite;
+  transform-origin: center;
+}
+
+.reveal.our-team.show { animation: slideright 3s cubic-bezier(.2,.9,.2,1) forwards; }
+
+/* Cards / Testimonials / Updates */
+.reveal.testimonials.show { animation: zoom 3s cubic-bezier(.2,.9,.2,1) forwards; }
+.reveal.updates.show { animation: zoom 3s cubic-bezier(.2,.9,.2,1) forwards; }
+
+/* Headings */
+h1.reveal.show { animation: neonPulse 3s 2 alternate; }
