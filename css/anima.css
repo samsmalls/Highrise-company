@@ -70,7 +70,6 @@
   transform-origin: center;
 }
 
-.reveal.our-team.show { animation: slideright 3s cubic-bezier(.2,.9,.2,1) forwards; }
 
 /* Cards / Testimonials / Updates */
 .reveal.testimonials.show { animation: zoom 3s cubic-bezier(.2,.9,.2,1) forwards; }
@@ -78,3 +77,4 @@
 
 /* Headings */
 h1.reveal.show { animation: neonPulse 3s 2 alternate; }
+
