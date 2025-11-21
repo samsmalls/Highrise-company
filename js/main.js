@@ -60,7 +60,6 @@ document.addEventListener('keydown', e => {
     '.services',
   '.achievements',
   '#achievements',
-    '.our-team',
     '.testimonials',
     '.updates',
     'h1'
@@ -102,4 +101,5 @@ document.addEventListener('keydown', e => {
 +
   hiddenElements.forEach(el => observer.observe(el));
 })();
+
 
